@@ -50,7 +50,7 @@ namespace EPlay
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Profile}/{action=Index}/{id?}"); //change to Home after you're done
             });
         }
     }
