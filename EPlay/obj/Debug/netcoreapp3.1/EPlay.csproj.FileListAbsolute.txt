@@ -114,3 +114,5 @@ E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Shared
 E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginInfo.cshtml.g.cs
 E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Shared\EditorTemplates\Login.cshtml.g.cs
 E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Shared\EditorTemplates\Registration.cshtml.g.cs
+E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Profile\AdminView.cshtml.g.cs
+E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Profile\UserView.cshtml.g.cs
