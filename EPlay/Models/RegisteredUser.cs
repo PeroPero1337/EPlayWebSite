@@ -9,30 +9,31 @@ namespace EPlay.Models
 {
     public class RegisteredUser : IdentityUser
     {
-        [Required(ErrorMessage = "Obvezno izpolnite polje")]
-        [RegularExpression("^[a-zA-Z]+$", ErrorMessage = "Dovoljene so samo črke")]
+        [Required(ErrorMessage = "Required")]
+        [RegularExpression("^[a-zA-Z]+$", ErrorMessage = "Only letters allowed")]
         public string FirstName { get; set; }
 
-        [Required(ErrorMessage = "Obvezno izpolnite polje")]
-        [RegularExpression("^[a-zA-Z]+$", ErrorMessage = "Dovoljene so samo črke")]
+        [Required(ErrorMessage = "Required")]
+        [RegularExpression("^[a-zA-Z]+$", ErrorMessage = "Only letters allowed")]
         public string LastName { get; set; }
 
-        [Required(ErrorMessage = "Obvezno izpolnite polje")]
+        [Required(ErrorMessage = "Required")]
         public override string UserName { get; set; }
 
-        [Required(ErrorMessage = "Obvezno izpolnite polje")]
+        [Required(ErrorMessage = "Required")]
         public string Sex { get; set; }
 
-        [Required(ErrorMessage = "Obvezno izpolnite polje")]
+        [Required(ErrorMessage = "Required")]
         [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy}")]
         public DateTime DateOfBirth { get; set; }
 
+        public DateTime DateJoined { get; set; }
 
-        [Required(ErrorMessage = "Obvezno izpolnite polje")]
+        [Required(ErrorMessage = "Required")]
         public string Country { get; set; }
 
-        [Required(ErrorMessage = "Obvezno izpolnite polje")]
-        [RegularExpression(@"([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}", ErrorMessage = "Prosim vnesite Email naslov")]
+        [Required(ErrorMessage = "Required")]
+        [RegularExpression(@"([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}", ErrorMessage = "Please enter a valid email address")]
         public override string Email { get; set; }
     }
 }

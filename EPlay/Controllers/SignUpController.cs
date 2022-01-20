@@ -33,6 +33,7 @@ namespace EPlay.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 var result = await _accountRepository.PasswordSignInAsync(user);
                 if (result.Succeeded)
                 {
@@ -65,6 +66,7 @@ namespace EPlay.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    user.DateJoined = DateTime.Now;
                     var result = await _accountRepository.CreatUserAsync(user);
                     if (result.Succeeded)
                         return RedirectToAction("Index", "SignUp");

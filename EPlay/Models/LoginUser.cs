@@ -8,10 +8,10 @@ namespace EPlay.Models
 {
     public class LoginUser
     {
-        [Required(ErrorMessage = "Obvezno izpolnite polje")]
+        [Required(ErrorMessage = "Required")]
         public string Username { get; set; }
 
-        [Required(ErrorMessage = "Obvezno izpolnite polje")]
+        [Required(ErrorMessage = "Required")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
