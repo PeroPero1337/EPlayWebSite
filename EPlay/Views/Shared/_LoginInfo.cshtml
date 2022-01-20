@@ -1,0 +1,22 @@
+﻿@inject Microsoft.AspNetCore.Identity.SignInManager<RegisteredUser> _logInManager
+@if (_logInManager.IsSignedIn(User))
+{
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-controls="navbarSupportedContent"
+           aria-expanded="false" aria-label="Toggle navigation">
+            Hello @User.Identity.Name
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" asp-action="Logout" asp-controller="SignUp">Logout</a>
+        </div>
+    </li>
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="SignUp" asp-action="Register">Registration</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="SignUp" asp-action="Index">Login</a>
+    </li>
+}

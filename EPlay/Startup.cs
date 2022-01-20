@@ -1,6 +1,9 @@
+using EPlay.Models;
+using EPlay.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,6 +27,13 @@ namespace EPlay
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<EPlayContext>();
+            services.AddIdentity<RegisteredUser, IdentityRole>().AddEntityFrameworkStores<EPlayContext>();
+
+            services.AddScoped<IAccountRepository, AccountRepository>();
+            
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,7 +60,7 @@ namespace EPlay
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Profile}/{action=Index}/{id?}"); //change to Home after you're done
+                    pattern: "{controller=Home}/{action=Index}/{id?}"); //change to Home after you're done
             });
         }
     }

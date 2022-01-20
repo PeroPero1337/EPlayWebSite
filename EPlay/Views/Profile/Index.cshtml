@@ -1,10 +1,34 @@
 ﻿@{ 
+    //only test data in here for now, change it later so it works
     ViewData["Title"] = "Profile Page";
 }
-<div class="profile-header">
-    <img id="userPic" src="C:\Users\peter\Desktop\kermit.jpg" />
-    <label id="username">User139238</label>
-    <label id="email">thatguy24@gmail.com</label>
-    <label id="password">Member since: November 1, 2021</label>
-    <label id="country">Country: Slovenia</label>
+<div class="profile-container">
+    <div class="profile-item profile-header">
+        <div class="row">
+            <div class="col-sm-1">
+                <img id="user-pic" src="https://pbs.twimg.com/profile_images/799653364216709120/U_wK3zP0_400x400.jpg" />
+            </div>
+            <div class="col-sm-auto">
+                <div id="user-info">
+                    <div class="row">
+                        <label class="col" id="username">User139238</label>
+                        <label class="col" id="email">thatguy24@gmail.com</label>
+                        <div class="w-100"></div>
+                        <label class="col" id="membership">Member since: November 1, 2021</label>
+                        <label class="col" id="country">Country: Slovenia</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="profile-item profile-custom">
+
+    </div>
+    <div class="profile-item profile-settings">
+        
+    </div>
+    <div class="profile-item profile-preferences" >
+
+    </div>
 </div>
+

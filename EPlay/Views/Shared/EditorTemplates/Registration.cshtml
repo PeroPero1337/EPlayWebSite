@@ -1,0 +1,49 @@
+﻿@model UserWithPass
+<div class="form-group">
+    @Html.Label("FirstName", "First name", new { @class = "control-label" })
+    @Html.EditorFor(m => m.FirstName)
+    @Html.ValidationMessageFor(m => m.FirstName)
+</div>
+<div class="form-group">
+    @Html.Label("LastName", "Last name", new { @class = "control-label" })
+    @Html.EditorFor(m => m.LastName)
+    @Html.ValidationMessageFor(m => m.LastName)
+</div>
+<div class="form-group">
+    @Html.Label("UserName", "Username", new { @class = "control-label" })
+    @Html.EditorFor(m => m.UserName)
+    @Html.ValidationMessageFor(m => m.UserName)
+</div>
+<div class="form-group">
+    @Html.Label("Sex", "Sex", new { @class = "control-label" })
+    @Html.DropDownListFor(m => m.Sex, new SelectList(Enum.GetValues(typeof(Gender))), new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Sex)
+</div>
+<div class="form-group">
+    @Html.Label("DateOfBirth", "Date of birth", new { @class = "control-label" })
+    @Html.EditorFor(m => m.DateOfBirth)
+    @Html.ValidationMessageFor(m => m.DateOfBirth)
+</div>
+<div class="form-group">
+    @Html.Label("Country", "Last name", new { @class = "control-label" })
+    @Html.DropDownListFor(m => m.Country, new SelectList(new Countires().countries), new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Country)
+</div>
+<div class="form-group">
+    @Html.Label("Email", "Email address", new { @class = "control-label" })
+    @Html.EditorFor(m => m.Email)
+    @Html.ValidationMessageFor(m => m.Email)
+</div>
+<div class="form-group">
+    @Html.Label("Password", "Password", new { @class = "control-label" })
+    @Html.PasswordFor(m => m.Pass, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.Pass)
+</div>
+<div class="form-group">
+    @Html.Label("PassCheck", "Re-enter Password", new { @class = "control-label" })
+    @Html.PasswordFor(m => m.PassCheck, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.PassCheck)
+</div>
+<div class="form-group">
+    <button type="submit" class="btn btn-danger btn-block">Register</button>
+</div>
