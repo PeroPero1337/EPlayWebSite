@@ -59,9 +59,9 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-  background-color: darkcyan;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-color: #3483eb;
 }
 .footer {
   position: absolute;
@@ -111,17 +111,20 @@ body {
     margin-left: 5px;
 }
 
-.profile-container{
-    display:grid;
-    grid-gap:10px;
-    background-color:greenyellow;
-    padding:10px;
+.profile-container {
+    display: grid;
+    grid-gap: 10px;
+    margin-top:30px;
+    margin-bottom:100px;
+    margin-left:15%;
+    margin-right:15%;
 }
 
 .profile-item{
     background-color: white;
     border-style: solid;
     padding: 15px;
+    
 }
 
 .profile-header{
@@ -134,6 +137,9 @@ body {
     grid-column: 1;
 }
 .profile-settings{
+    padding-left:15px;
+    padding-top:20px;
+    padding-bottom:20px;
     grid-row: 2;
     grid-column: 2 / span 3;
 }
@@ -143,5 +149,5 @@ body {
 }
 
 .ui-widget-content {
-    background: #000;
+    background: #1b6ec2 !important;
 }
