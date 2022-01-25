@@ -53,6 +53,8 @@ button.accept-policy {
 
 /* Sticky footer styles
 -------------------------------------------------- */
+
+/*dark color: #212529*/
 html {
   position: relative;
   min-height: 100%;
@@ -61,7 +63,8 @@ html {
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
-    background-color: #3483eb;
+    /*background-color: #3483eb;*/
+    background-color: #212529;
 }
 .footer {
   position: absolute;
@@ -70,6 +73,32 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
   background-color:white;
+}
+
+.override-bg-dark {
+    background-color: #111;
+}
+
+.dot:before {
+    content: '\25CF';
+}
+
+.privacy-container {
+    background-color: white;
+    width: 75%;
+    height: 75%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.intro {
+    font-size: 125%;
+    font-weight: bold;
+    color: #121111;
 }
 
 .signup-container {
@@ -171,7 +200,7 @@ body {
         'primary primary primary secondary secondary'
         'footer footer footer footer footer';
     grid-gap: 10px;
-    padding: 10px;
+    padding: 20px;
      
 }
 
@@ -185,22 +214,96 @@ body {
     grid-area:header;
 }
 
-.content-header > h1{
+.content-primary > h1{
     color:white;
+    padding-left: 10px;
 }
-.content-header > hr{
-    color:white;
-    height:10px;
+.content-primary > hr {
+    color: white;
+    height: 10px;
+    padding-left: 10px;
 }
 
 .content-primary{
     grid-area:primary;
+
 }
 
-.content-secondary{
-    grid-area:secondary;
+.content-primary > div{
+    border-radius:10px;
+    background-color:#16191c;
+    color:white;
+}
+
+.content-secondary {
+    grid-area: secondary;
+    background-color: indianred;
+
 }
 
 .content-footer{
     grid-area:footer;
+}
+
+.articles {
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: grid;
+    grid-template-areas: "item1 item2";
+    align-items: center;
+    border-bottom: 5px solid #464d52;
+    border-radius: 15px;
+}
+
+.articles:last-child{
+    border-bottom: 0px;
+}
+
+.articles:nth-child(2n+1) > label{
+    grid-area: item1;
+}
+
+.articles:nth-child(2n+2) > label{
+    grid-area: item2;
+}
+
+.articles:nth-child(2n+1) > img{
+    grid-area: item2;
+}
+
+.articles:nth-child(2n+2) > img{
+    grid-area: item1;
+}
+
+.articles > img {
+    border-radius:10px;
+    width:400px;
+    height:200px;
+}
+
+#simpleCSGO{
+    width:200px !important;
+}
+
+.articles > label{
+    padding-left:10px;
+    padding-right:10px;
+    grid-area:item2;
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+.sponsors{
+    text-align:center;
+}
+.sponsors > h3{
+    color:white;
+}
+.sponsors > img{
+    margin-left:10px;
+    margin-right:10px;
+    max-width:5%;
 }
