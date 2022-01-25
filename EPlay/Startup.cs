@@ -26,6 +26,12 @@ namespace EPlay
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = Microsoft.AspNetCore.Http.SameSiteMode.None;
+            });
+
             services.AddControllersWithViews();
 
             services.AddDbContext<EPlayContext>();
@@ -51,6 +57,7 @@ namespace EPlay
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseCookiePolicy();
 
             app.UseRouting();
 
@@ -61,7 +68,7 @@ namespace EPlay
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Profile}/{action=Index}/{id?}"); //change to Home after you're done
+                    pattern: "{controller=Home}/{action=Index}/{id?}"); //change to Home after you're done
             });
         }
     }
