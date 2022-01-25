@@ -1,8 +1,4 @@
-﻿@model RegisteredUser
-@{
-    //only test data in here for now, change it later so it works
-    ViewData["Title"] = "Profile Page";
-}
+﻿@model ProfileModel
 <div class="profile-container">
     <div class="profile-item profile-header">
         <div class="row">
@@ -12,11 +8,11 @@
             <div class="col-sm-auto">
                 <div id="user-info">
                     <div class="row">
-                        <label class="col" id="username">@Model.UserName</label>
-                        <label class="col" id="email">@Model.Email</label>
+                        <label class="col" id="username">@Model.singleUser.UserName</label>
+                        <label class="col" id="email">@Model.singleUser.Email</label>
                         <div class="w-100"></div>
-                        <label class="col" id="membership">Member since: @Model.DateJoined.ToString("dd MMMM yyyy")</label>
-                        <label class="col" id="country">Country: @Model.Country</label>
+                        <label class="col" id="membership">Member since: @Model.singleUser.DateJoined.ToString("dd MMMM yyyy")</label>
+                        <label class="col" id="country">Country: @Model.singleUser.Country</label>
                     </div>
                 </div>
             </div>

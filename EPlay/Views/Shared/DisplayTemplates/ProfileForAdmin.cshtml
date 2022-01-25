@@ -1,0 +1,26 @@
+﻿@model ProfileModel
+<div class="table-container">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Username</th>
+                <th scope="col">Email</th>
+                <th scope="col">Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.allUsers)
+            {
+<tr>
+    <th scope="row">@item.Id</th>
+    <td>@item.UserName</td>
+    <td>@item.Email</td>
+    <td>@item.Country</td>
+    <td>
+        @Html.ActionLink("Manage", "Manage", "Profile", item)
+    </td> <!--TODO: Add options for admin to delete or update users-->
+</tr>            }
+        </tbody>
+    </table>
+</div>

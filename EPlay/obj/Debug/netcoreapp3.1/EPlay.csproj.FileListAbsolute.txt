@@ -114,7 +114,9 @@ E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Shared
 E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginInfo.cshtml.g.cs
 E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Shared\EditorTemplates\Login.cshtml.g.cs
 E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Shared\EditorTemplates\Registration.cshtml.g.cs
-E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Profile\AdminView.cshtml.g.cs
-E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Profile\UserView.cshtml.g.cs
 E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
 E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Navbar.cshtml.g.cs
+E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Article\Index.cshtml.g.cs
+E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Profile\Manage.cshtml.g.cs
+E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Shared\DisplayTemplates\Profile.cshtml.g.cs
+E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Shared\DisplayTemplates\ProfileForAdmin.cshtml.g.cs

@@ -1,0 +1,38 @@
+﻿@model UserWithRole
+<h2>User</h2>
+<div class="container-fluid">
+    <div class="user-info">
+        <h3>User @Model._user.UserName Details</h3>
+        <div class="text-capitalize text-dark">
+            <p class="font-weight-bold">
+                Roles:
+                @foreach (var item in Model._roles)
+                {
+                    <br />
+                    <span class="font-weight-light dot"> @item.ToString()</span>
+                }
+            </p>
+        </div>
+        <div class="text-capitalize text-dark">
+            <p class="font-weight-bold">ID: <span class="font-weight-light">@Html.DisplayFor(m => m._user.Id)</span></p>
+        </div>
+        <div class="text-capitalize text-dark">
+            <p class="font-weight-bold">Name: <span class="font-weight-light">@Html.DisplayFor(m => m._user.FirstName)</span></p>
+        </div>
+        <div class="text-capitalize text-dark">
+            <p class="font-weight-bold">Surname: <span class="font-weight-light">@Html.DisplayFor(m => m._user.LastName)</span></p>
+        </div>
+        <div>
+            <p class="font-weight-bold text-dark">Date of birth: <span class="font-weight-light">@Html.DisplayFor(m => m._user.DateOfBirth)</span> </p>
+        </div>
+        <div>
+            <p class="font-weight-bold text-dark">Email address: <span class="font-weight-light">@Html.DisplayFor(m => m._user.Email)</span> </p>
+        </div>
+        <div>
+            <p class="font-weight-bold text-dark">Sex: <span class="font-weight-light">@Html.DisplayFor(m => m._user.Sex)</span> </p>
+        </div>
+        <div>
+            <p class="font-weight-bold text-dark">Date joined: <span class="font-weight-light">@Html.DisplayFor(m => m._user.DateJoined)</span> </p>
+        </div>
+    </div>
+</div>
