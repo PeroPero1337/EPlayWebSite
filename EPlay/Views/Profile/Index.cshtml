@@ -1,9 +1,15 @@
 ﻿@model ProfileModel
-@{ 
-    //only test data in here for now, change it later so it works
-    ViewData["Title"] = "Profile Page";
+@{ //only test data in here for now, change it later so it works
+                
+    ViewData["Title"] = "Profile Page"; 
 }
-@Html.DisplayForModel("Profile")
-@if (User.IsInRole("Admin")) { 
-    @Html.DisplayForModel("ProfileForAdmin")
+@if (User.IsInRole("Guest"))
+{
+    @Html.DisplayForModel("Profile")
+    
+    @if (User.IsInRole("Admin"))
+    {
+        @Html.DisplayForModel("ProfileForAdmin")
+    }
 }
+

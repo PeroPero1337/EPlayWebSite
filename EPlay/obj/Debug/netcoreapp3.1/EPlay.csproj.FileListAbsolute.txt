@@ -116,7 +116,11 @@ E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Shared
 E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Shared\EditorTemplates\Registration.cshtml.g.cs
 E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
 E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Navbar.cshtml.g.cs
-E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Article\Index.cshtml.g.cs
 E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Profile\Manage.cshtml.g.cs
 E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Shared\DisplayTemplates\Profile.cshtml.g.cs
 E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\Shared\DisplayTemplates\ProfileForAdmin.cshtml.g.cs
+E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\StaticArticle\LoLS2022DropsRewards.cshtml.g.cs
+E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\StaticArticle\EslPubgOpenSoon.cshtml.g.cs
+E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\StaticArticle\EslOneFallQalifiers.cshtml.g.cs
+E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\StaticArticle\EslOneFallWrapUp.cshtml.g.cs
+E:\GitRepositories\EPlayWebSite\EPlay\obj\Debug\netcoreapp3.1\Razor\Views\StaticArticle\SimpleNumOne.cshtml.g.cs
