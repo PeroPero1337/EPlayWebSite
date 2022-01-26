@@ -1,3 +1,4 @@
+using EPlay.Hubs;
 using EPlay.Models;
 using EPlay.Repository;
 using Microsoft.AspNetCore.Builder;
@@ -23,7 +24,6 @@ namespace EPlay
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<CookiePolicyOptions>(options =>
@@ -38,11 +38,12 @@ namespace EPlay
             services.AddIdentity<RegisteredUser, IdentityRole>().AddEntityFrameworkStores<EPlayContext>();
 
             services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddSignalR();
             
 
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        [Obsolete]
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -52,7 +53,6 @@ namespace EPlay
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
@@ -63,12 +63,15 @@ namespace EPlay
 
             app.UseAuthorization();
             app.UseAuthentication();
-
+            app.UseSignalR(route => 
+            {
+                route.MapHub<ChatHub>("/ChatRoom/Index");
+            });
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}"); //change to Home after you're done
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

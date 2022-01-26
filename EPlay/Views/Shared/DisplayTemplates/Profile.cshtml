@@ -19,7 +19,20 @@
         </div>
     </div>
     <div class="profile-item profile-custom">
+        <h2>Friends</h2>
+        <hr />
+        @foreach (var item in Model.allUsers)
+        {
 
+            @if (item.UserName != User.Identity.Name)
+            {
+                <div class="friend" id="@item.Id">
+                    <label class="col">@item.UserName</label>
+                </div>
+                <hr />
+            }
+
+        }
 
     </div>
     <div class="profile-item profile-settings">

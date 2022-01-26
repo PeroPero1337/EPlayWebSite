@@ -4,14 +4,16 @@ using EPlay.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EPlay.Migrations
 {
     [DbContext(typeof(EPlayContext))]
-    partial class EPlayContextModelSnapshot : ModelSnapshot
+    [Migration("20220126212957_adding-messages")]
+    partial class addingmessages
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -269,11 +271,11 @@ namespace EPlay.Migrations
 
             modelBuilder.Entity("EPlay.Models.Message", b =>
                 {
-                    b.HasOne("EPlay.Models.RegisteredUser", "Sender")
+                    b.HasOne("EPlay.Models.RegisteredUser", "AppUser")
                         .WithMany("Messages")
                         .HasForeignKey("UserId");
 
-                    b.Navigation("Sender");
+                    b.Navigation("AppUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

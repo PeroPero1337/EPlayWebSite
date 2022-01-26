@@ -35,5 +35,13 @@ namespace EPlay.Models
         [Required(ErrorMessage = "Required")]
         [RegularExpression(@"([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}", ErrorMessage = "Please enter a valid email address")]
         public override string Email { get; set; }
+
+        //adding messages
+        public RegisteredUser()
+        {
+            Messages = new HashSet<Message>();
+        }
+        public virtual ICollection<Message> Messages { get; set; }
+
     }
 }

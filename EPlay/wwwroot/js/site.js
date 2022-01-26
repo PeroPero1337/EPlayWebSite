@@ -18,7 +18,4 @@ $(document).ready(function () {
         document.cookie = button.dataset.cookieString;
     }, false);
 
-
-
-
 });
