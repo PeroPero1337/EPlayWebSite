@@ -12,6 +12,21 @@ $(document).ready(function () {
         changeyear: true
     });
 
+    var game = $('#selectGame');
+    var proview = $('#EplayProView');
+
+    $('#selectGame option[value=3]').attr('selected', 'selected');
+    proview.attr("href", "https://probuildstats.com/");
+
+    game.on('change', function () {
+        if (this.value == 1)
+            proview.attr("href", "https://www.hltv.org/");
+        else if (this.value == 2)
+            proview.attr("href", "https://www.hltv.org/");
+        else if (this.value == 3)
+            proview.attr("href", "https://probuildstats.com/");
+    });
+
 
     //cookie button
     var button = document.querySelector("#cookieConsent button[data-cookie-string]");
@@ -19,11 +34,18 @@ $(document).ready(function () {
         document.cookie = button.dataset.cookieString;
     }, false);
 
-    function updateScroll() {
-        var element = document.getElementById("scroller");
-        element.scrollTop = element.scrollHeight;
+    try {
+        function updateScroll() {
+            var element = document.getElementById("scroller");
+            element.scrollTop = element.scrollHeight;
+        }
+
+        updateScroll();
+    }
+    catch (ex) {
+        console.log(ex);
     }
 
-    updateScroll();
+    
 
 });

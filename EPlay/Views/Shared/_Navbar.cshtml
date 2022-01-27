@@ -9,15 +9,16 @@
 @if (_logInManager.IsSignedIn(User))
 {
     <li class="nav-item">
-        <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Challenges</a>
+        <a class="nav-link text-light" id="EplayProView">Pro view</a>
     </li>
     <li class="nav-item">
         <a class="nav-link text-light" asp-area="" asp-controller="ChatRoom" asp-action="Index">Chat room</a>
     </li>
     @if (User.IsInRole("Premium"))
     {
+
         <li class="nav-item">
-            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Pro view</a>
+            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Challenges</a>
         </li>
     }
 }
