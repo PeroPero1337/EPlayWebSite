@@ -24,10 +24,10 @@
         @foreach (var item in Model.allUsers)
         {
 
-            @if (item.UserName != User.Identity.Name)
+            @if (item.UserName != Model.singleUser.UserName)
             {
-                <div class="friend" id="@item.Id">
-                    <label class="col">@item.UserName</label>
+                <div class="friend link-danger" id="@item.Id">
+                    @Html.ActionLink(item.UserName, "PublicProfile", "Profile", item)
                 </div>
                 <hr />
             }
@@ -46,7 +46,7 @@
             </div>
             <div class="col-sm-auto my-auto">
                 <div class="form-inline">
-                    <label class="my-1 mr-2" for="setting4Select">Setting4</label>
+                    <label class="my-1 mr-2" for="setting4Select">Max articles</label>
                     <select class="custom-select my-1 mr-sm-2" id="setting4Select">
                         <option selected>Choose...</option>
                         <option value="1">1</option>
@@ -77,7 +77,7 @@
             <div class="col-sm-auto my-auto">
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" id="switchSettings3">
-                    <label class="form-check-label" for="switchSettings3">Settings3</label>
+                    <label class="form-check-label" for="switchSettings3">Live preview</label>
                 </div>
             </div>
             <div class="col-sm-auto my-auto">
@@ -91,5 +91,16 @@
     </div>
     <div class="profile-item profile-preferences">
         <h2>Preferences</h2>
+        <div class="row">
+            <div class="form-inline">
+                <label class="my-1 mr-2" for="selectGame">Game</label>
+                <select class="custom-select my-1 mr-sm-2" id="selectGame">
+                    <option selected>Choose...</option>
+                    <option value="1">CSGO</option>
+                    <option value="2">PUBG</option>
+                    <option value="3">Leage of Legends</option>
+                </select>
+            </div>
+        </div>
     </div>
 </div>

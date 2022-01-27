@@ -37,5 +37,15 @@ namespace EPlay.Controllers
                 return View(output);
             }
         }
+
+        public IActionResult PublicProfile(string id)
+        {
+            using (var db = new EPlayContext())
+            {
+                var user = db.registered_users.FirstOrDefault(x => x.Id == id);
+                ProfileModel profile = new ProfileModel(db, user.UserName);
+                return View(profile);
+            }
+        }
     }
 }
