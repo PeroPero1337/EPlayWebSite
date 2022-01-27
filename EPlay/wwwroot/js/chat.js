@@ -13,7 +13,7 @@ const messagesQueue = [];
 
 document.getElementById('submitButton').addEventListener('click', () => {
     var currentdate = new Date();
-    timeStamp.innerHTML =
+    timeStamp.innerHTML = + //UNDEFINED??????????????????
         (currentdate.getMonth() + 1) + "/" +
         currentdate.getDate() + "/" +
         currentdate.getFullYear() + " " +

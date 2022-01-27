@@ -4,6 +4,7 @@
 
 // Write your JavaScript code.
 $(document).ready(function () {
+
     //date-picker
     $('input[data-date-picker="true"').datepicker({
         dateFormat: "dd.mm.yy",
@@ -17,5 +18,12 @@ $(document).ready(function () {
     button.addEventListener("click", function (event) {
         document.cookie = button.dataset.cookieString;
     }, false);
+
+    function updateScroll() {
+        var element = document.getElementById("scroller");
+        element.scrollTop = element.scrollHeight;
+    }
+
+    updateScroll();
 
 });

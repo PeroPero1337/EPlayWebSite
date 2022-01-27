@@ -11,7 +11,7 @@ namespace EPlay.Controllers
     public class ChatRoomController : Controller
     {
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             using (var db = new EPlayContext())
             {
@@ -22,7 +22,7 @@ namespace EPlay.Controllers
                     ViewBag.CurrentUserName = currentUser.UserName;
                 }
                 var messages = db.messages.ToList();
-                return View();
+                return View(messages);
             }
         }
 
@@ -40,6 +40,7 @@ namespace EPlay.Controllers
                     await db.messages.AddAsync(message);
                     await db.SaveChangesAsync();
                     return RedirectToAction("Index");
+                    //return Ok();
                 }
                 return Error();
             }

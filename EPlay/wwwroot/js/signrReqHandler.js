@@ -1,11 +1,16 @@
-﻿var connection = new singalR.HubConnectionBuilder().withUrl('/ChatRoom/Index').build();
+﻿try {
+    var connection = new signalR.HubConnectionBuilder().withUrl('/ChatRoom/Index').build();
 
-connection.on('receiveMessage', addMessageToChat);
+    connection.on('receiveMessage', addMessageToChat);
 
-connection.start().catch(error => {
-    console.error(error.message);
-});
+    connection.start().catch(error => {
+        console.error(error.message);
+    });
 
-function sendMessageToHub(message) {
-    connection.invoke('sendMessage', message)
+    function sendMessageToHub(message) {
+        connection.invoke('sendMessage', message)
+    }
+}
+catch (ex) {
+    console.log(ex);
 }
